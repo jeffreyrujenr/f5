@@ -5,18 +5,19 @@ type Props = {};
 
 const Navbar = (props: Props) => {
 	return (
-		<div className='flex justify-between items-center h-[10vh] w-[80%] mx-auto border-b-2 fixed top-0 right-0 left-0'>
-			<Link
-				href=''
-				className='w-[10%] text-center'>
-				F5
-			</Link>
-			<div className='w-[75%] flex justify-evenly items-center text-center'>
-				<Link href=''>Volunteer</Link>
-				<Link href=''>Invite</Link>
-				<Link href=''>Support</Link>
+		<nav className='navbar bg-base-100 fixed top-0 left-0 right-0 z-10'>
+			<div className="navbar-start border-2 w-[15%]">
+				<Link
+					href=''>
+					F5
+				</Link>
 			</div>
-			<div className='flex h-[10vh] justify-evenly items-center w-[15%]'>
+			<div className='navbar-center border-2 w-[70%] justify-evenly'>
+				<Link className='btn btn-ghost' href=''>Volunteer</Link>
+				<Link className='btn btn-ghost' href=''>Invite</Link>
+				<Link className='btn btn-ghost' href=''>Support</Link>
+			</div>
+			<div className='navbar-end border-2 w-[15%] justify-evenly'>
 				{/* Instagram */}
 				<svg
 					className='h-[3vh] w-[3vh]'
@@ -30,7 +31,7 @@ const Navbar = (props: Props) => {
 				{/* Mobile */}
 				<PhoneIcon className='h-[3vh] w-[3vh]' />
 			</div>
-		</div>
+		</nav>
 	);
 };
 
