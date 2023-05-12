@@ -1,32 +1,22 @@
+import Link from 'next/link';
 import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/solid';
-import Image from 'next/image';
 
-export default function Home() {
+const Navbar = () => {
 	return (
-		<main className='flex flex-col items-center justify-center snap-y snap-mandatory text-center'>
-			<section className="hero min-h-screen bg-base-200">
-				<div className="hero-content text-center">
-					<div className="max-w-md">
-						<h1 className="text-5xl font-bold">F5 Moments</h1>
-						<p className="py-6">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere eligendi neque aspernatur ad aut, repellat mollitia quisquam? Explicabo, tenetur quo.</p>
-						<div className="flex justify-evenly items-center px-10">
-						<button className="btn btn-primary">Invite Us</button>
-						<button className="btn btn-outline">Volunteer</button>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section className='flex flex-col justify-center items-center h-[100vh] w-[50%] border-b-2 snap-center'>
-				<div className='h-[50%] flex flex-col justify-center items-center border-b-2 w-full'>
-					About
-				</div>
-				<div className='h-[50%] flex flex-col justify-center items-center w-full'>
-					Testimonials
-				</div>
-			</section>
-			<footer className='footer footer-center p-4 bg-neutral text-neutral-content'>
-				<div className="flex justify-evenly">
-					{/* Instagram */}
+		<nav className='navbar bg-base-100 fixed top-0 left-0 right-0 z-10'>
+			<div className="navbar-start border-2 w-[15%]">
+				<Link
+					href=''>
+					F5
+				</Link>
+			</div>
+			<div className='navbar-center border-2 w-[70%] justify-evenly'>
+				<Link className='btn btn-ghost' href=''>Volunteer</Link>
+				<Link className='btn btn-ghost' href=''>Invite</Link>
+				<Link className='btn btn-ghost' href=''>Support</Link>
+			</div>
+			<div className='navbar-end border-2 w-[15%] justify-evenly md:hidden sm:hidden'>
+				{/* Instagram */}
 				<svg
 					className='h-[3vh] w-[3vh]'
 					xmlns='http://www.w3.org/2000/svg'
@@ -38,10 +28,9 @@ export default function Home() {
 				<EnvelopeIcon className='h-[3vh] w-[3vh]' />
 				{/* Mobile */}
 				<PhoneIcon className='h-[3vh] w-[3vh]' />
-				{/* Whatsapp */}
-				</div>
-				<p>Copyright &copy; 2023 - All rights reserved</p>
-			</footer>
-		</main>
+			</div>
+		</nav>
 	);
-}
+};
+
+export default Navbar;
