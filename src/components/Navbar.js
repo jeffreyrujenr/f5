@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const Navbar = () => {
 	return (
-		<nav className='navbar z-10 fixed backdrop-blur-xl border-[1px] rounded-xl bg-white/50 px-24'>
+		<nav className='navbar z-10 fixed backdrop-blur-xl border-[1px] rounded-xl bg-white/50 px-24 lg:px-32'>
 			{/* Desktop Navbar */}
 			<div className='navbar-start hidden lg:flex'>
 				<Link
@@ -20,7 +20,7 @@ const Navbar = () => {
 				</Link>
 			</div>
 
-			<div className='navbar-center hidden lg:flex'>
+			<div className='navbar-end hidden lg:flex'>
 				<ul className='menu menu-horizontal z-10 bg-inherit'>
 					<li>
 						<Link href=''>Volunteer</Link>
