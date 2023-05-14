@@ -1,47 +1,46 @@
 'use client';
 
-import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/solid';
+import {
+	AcademicCapIcon,
+	BuildingOffice2Icon,
+	EnvelopeIcon,
+	PhoneIcon,
+	UserGroupIcon,
+} from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect } from 'react';
 
 const testimonials = [
 	{
-		text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores non esse sequi libero impedit, aperiam voluptatum ullam animi consequatur praesentium',
-		image: 'http://via.placeholder.com/360x360',
+		text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores non esse sequi libero impedit',
 		name: 'Name 1',
-		institution: 'Institution 1',
 		city: 'City 1',
 	},
 	{
 		text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores non esse sequi libero impedit',
-		image: 'http://via.placeholder.com/360x360',
 		name: 'Name 2',
-		institution: 'Institution 2',
 		city: 'City 2',
 	},
 	{
-		text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores non esse sequi libero impedit, aperiam voluptatum',
-		image: 'http://via.placeholder.com/360x360',
+		text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores non esse sequi libero impedit',
 		name: 'Name 3',
-		institution: 'Institution 3',
 		city: 'City 3',
 	},
 ];
 
 export default function Home() {
 	return (
-		<main className='flex flex-col h-full items-center justify-center text-center'>
+		<main className='flex flex-col h-screen items-center justify-center text-center'>
 			<section
-				className='hero min-h-screen'
+				className='hero h-1/3 backdrop-blur-xl w-2/3 border-[1px] rounded-xl mb-8 bg-white/50'
 				id='hero'>
 				<div className='hero-content text-center'>
 					<div className='max-w-md'>
 						<h1 className='text-4xl font-bold'>F5 MOMENTS</h1>
 						<p className='py-6'>
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere
-							eligendi neque aspernatur ad aut, repellat mollitia quisquam?
-							Explicabo, tenetur quo.
+							F5 is a non-profit organization that trains and equips the
+							churches to do School/Youth ministry in their locality
 						</p>
 						<div className='flex justify-evenly items-center px-10'>
 							<Link
@@ -58,24 +57,46 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-			<section className='flex min-h-screen justify-center items-center w-2/3'>
-				<p className='w-1/2 text-center'>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus,
-					nulla. Blanditiis enim veniam quae porro amet aperiam. Fugit, ratione
-					accusantium fuga sit aliquid minus repudiandae inventore ab,
-					voluptatem rem ullam.
-				</p>
-				<div className='flex flex-col w-1/2 text-center'>
-					<h3 className='text-3xl'>10000+</h3>
-					<p className='opacity-75 mb-4'>Students reached</p>
-					<h3 className='text-3xl'>100+</h3>
-					<p className='opacity-75 mb-4'>Institutions</p>
-					<h3 className='text-3xl'>10+</h3>
-					<p className='opacity-75 mb-4'>Cities</p>
+
+			<section className='flex justify-center items-center'>
+				<div className='stats stats-horizontal shadow'>
+					<div className='stat'>
+						<div className='stat-figure text-primary'>
+							<UserGroupIcon
+								width={20}
+								height={20}
+							/>
+						</div>
+						<div className='stat-title'>Students Reached</div>
+						<div className='stat-value text-primary'>31000</div>
+						<div className='stat-desc'>2017 - now</div>
+					</div>
+					<div className='stat'>
+						<div className='stat-figure'>
+							<AcademicCapIcon
+								width={20}
+								height={20}
+							/>
+						</div>
+						<div className='stat-title'>Institutions</div>
+						<div className='stat-value'>39</div>
+						<div className='stat-desc'>2017 - now</div>
+					</div>
+					<div className='stat'>
+						<div className='stat-figure text-secondary'>
+							<BuildingOffice2Icon
+								width={20}
+								height={20}
+							/>
+						</div>
+						<div className='stat-title'>Cities</div>
+						<div className='stat-value text-secondary'>7</div>
+						<div className='stat-desc'>2017 - now</div>
+					</div>
 				</div>
 			</section>
 
-			<section className='flex min-h-screen flex-col lg:flex-row w-full justify-evenly items-center'>
+			{/* <section className='flex min-h-screen flex-col lg:flex-row w-full justify-evenly items-center '>
 				{testimonials.map((testimony) => (
 					<div
 						key={testimony.name}
@@ -83,31 +104,22 @@ export default function Home() {
 						<h3 className='text-2xl w-2/3 opacity-75'>
 							&ldquo; {testimony.text} &rdquo;
 						</h3>
-						<Image
-							src={testimony.image}
-							alt=''
-							height={100}
-							width={100}
-							className='rounded-full shadow-lg my-4'
-						/>
 						<h4>{testimony.name}</h4>
-						<p className='opacity-50'>
-							{testimony.institution}, {testimony.city}
-						</p>
+						<p className='opacity-50'>{testimony.city}</p>
 					</div>
 				))}
-			</section>
+			</section> */}
 
 			<section
 				id='contact'
-				className='footer footer-center p-4 border-t-[1px]'>
+				className='footer footer-center p-4 border-t-[1px] backdrop-blur-xl fixed bottom-0 left-0 right-0 bg-white/50'>
 				<div className='flex justify-evenly items-center w-full flex-wrap'>
 					{/* Instagram */}
 					<Link
 						href='https://www.instagram.com/'
 						className='flex'>
 						<svg
-							className='h-[3vh] w-[3vh]'
+							className='h-[3vh] w-[3vh] mr-2'
 							xmlns='http://www.w3.org/2000/svg'
 							fill='currentColor'
 							viewBox='0 0 24 24'>
@@ -117,17 +129,17 @@ export default function Home() {
 					</Link>
 					{/* Mail */}
 					<Link
-						href=''
+						href='mailto:jeremiahjerry93@gmail.com'
 						className='flex'>
-						<EnvelopeIcon className='h-[3vh] w-[3vh]' />
-						info@f5moments.org
+						<EnvelopeIcon className='h-[3vh] w-[3vh] mr-2' />
+						jeremiahjerry93@gmail.com
 					</Link>
 					{/* Mobile */}
 					<Link
-						href=''
+						href='tel:+919843209882'
 						className='flex'>
-						<PhoneIcon className='h-[3vh] w-[3vh]' />
-						+91-123-456-7890
+						<PhoneIcon className='h-[3vh] w-[3vh] mr-2' />
+						+91-9843209882
 					</Link>
 				</div>
 				<p>Copyright &copy; 2023 - All rights reserved</p>
