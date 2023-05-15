@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const Navbar = () => {
 	return (
-		<nav className='navbar z-10 fixed backdrop-blur-xl border-[1px] rounded-xl bg-white/50 px-24 lg:px-32'>
+		<nav className='navbar z-10 fixed backdrop-blur-xl border-[1px] rounded-xl'>
 			{/* Desktop Navbar */}
 			<div className='navbar-start hidden lg:flex'>
 				<Link

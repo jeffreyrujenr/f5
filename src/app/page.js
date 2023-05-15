@@ -31,9 +31,9 @@ const testimonials = [
 
 export default function Home() {
 	return (
-		<main className='flex flex-col h-screen items-center justify-center text-center'>
+		<main className='flex flex-col h-full items-center justify-center text-center'>
 			<section
-				className='hero h-1/3 backdrop-blur-xl w-2/3 border-[1px] rounded-xl mb-8 bg-white/50'
+				className='hero min-h-screen'
 				id='hero'>
 				<div className='hero-content text-center'>
 					<div className='max-w-md'>
@@ -50,7 +50,7 @@ export default function Home() {
 							</Link>
 							<Link
 								href=''
-								className='btn btn-outline'>
+								className='btn btn-outline backdrop-blur-xl'>
 								Volunteer
 							</Link>
 						</div>
@@ -58,7 +58,7 @@ export default function Home() {
 				</div>
 			</section>
 
-			<section className='flex justify-center items-center'>
+			<section className='flex flex-col justify-center items-center min-h-screen'>
 				<div className='stats stats-horizontal shadow'>
 					<div className='stat'>
 						<div className='stat-figure text-primary'>
@@ -96,6 +96,46 @@ export default function Home() {
 				</div>
 			</section>
 
+			<section className='flex flex-col justify-center items-center min-h-screen'>
+				<div className='mockup-phone'>
+					<div className='camera'></div>
+					<div className='display'>
+						<div className='artboard bg-white phone-1 p-4'>
+							<div className='py-4'></div>
+							<h3 className='mb-4 opacity-75'>We are coming to your city</h3>
+
+							<div className='chat chat-end'>
+								<div className='chat-bubble chat-bubble-success'>Bangalore</div>
+							</div>
+							<div className='chat chat-start'>
+								<div className='chat-bubble chat-bubble-primary'>Chennai</div>
+							</div>
+							<div className='chat chat-end'>
+								<div className='chat-bubble chat-bubble-success'>Trichy</div>
+							</div>
+							<div className='chat chat-start'>
+								<div className='chat-bubble chat-bubble-primary'>Hyderabad</div>
+							</div>
+							<div className='chat chat-end'>
+								<div className='chat-bubble chat-bubble-success'>Vizag</div>
+							</div>
+							<div className='chat chat-start'>
+								<div className='chat-bubble chat-bubble-primary'>Madurai</div>
+							</div>
+							<div className='chat chat-end'>
+								<div className='chat-bubble chat-bubble-success'>
+									Tirunelveli
+								</div>
+							</div>
+							<div className='chat chat-start'>
+								<div className='chat-bubble chat-bubble-primary'>Hosur</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<h2 className='py-16 text-3xl'>See you there!</h2>
+			</section>
+
 			{/* <section className='flex min-h-screen flex-col lg:flex-row w-full justify-evenly items-center '>
 				{testimonials.map((testimony) => (
 					<div
@@ -112,7 +152,7 @@ export default function Home() {
 
 			<section
 				id='contact'
-				className='footer footer-center p-4 border-t-[1px] backdrop-blur-xl fixed bottom-0 left-0 right-0 bg-white/50'>
+				className='footer footer-center p-4 border-t-[1px] backdrop-blur-xl bg-white/50'>
 				<div className='flex justify-evenly items-center w-full flex-wrap'>
 					{/* Instagram */}
 					<Link
