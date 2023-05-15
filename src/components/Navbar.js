@@ -11,11 +11,11 @@ const Navbar = () => {
 					href='/#hero'
 					className='hover:opacity-75'>
 					<Image
-						className='rounded-full'
+						className='rounded-full h-[10vh] w-[10vh]'
 						src='/F5 Logo-color black.png'
 						alt=''
-						height={32}
-						width={32}
+						height={128}
+						width={128}
 					/>
 				</Link>
 			</div>
@@ -23,7 +23,9 @@ const Navbar = () => {
 			<div className='navbar-end hidden lg:flex'>
 				<ul className='menu menu-horizontal z-10 bg-inherit'>
 					<li>
-						<Link href=''>Volunteer</Link>
+						<Link href='https://docs.google.com/forms/d/1yIqavxRGwO2-281JZ1Y4k1iyjLHFtRpRBg4XXm2U96I'>
+							Volunteer
+						</Link>
 					</li>
 					<li>
 						<Link href=''>Invite</Link>
@@ -45,15 +47,18 @@ const Navbar = () => {
 						tabIndex={0}
 						className='btn btn-ghost lg:hidden'>
 						<Bars3Icon
-							height={28}
-							width={28}
+							height={128}
+							width={128}
+							className='h-[5vh] w-[5vh]'
 						/>
 					</label>
 					<ul
 						tabIndex={0}
 						className='menu menu-compact dropdown-content mt-3 p-2 shadow rounded-box w-52'>
 						<li>
-							<Link href=''>Volunteer</Link>
+							<Link href='https://docs.google.com/forms/d/1yIqavxRGwO2-281JZ1Y4k1iyjLHFtRpRBg4XXm2U96I'>
+								Volunteer
+							</Link>
 						</li>
 						<li>
 							<Link href=''>Invite</Link>
@@ -81,11 +86,11 @@ const Navbar = () => {
 					href='/#hero'
 					className='hover:opacity-75'>
 					<Image
-						className='rounded-full'
+						className='rounded-full h-[10vh] w-[10vh]'
 						src='/F5 Logo-color black.png'
 						alt=''
-						height={36}
-						width={36}
+						height={128}
+						width={128}
 					/>
 				</Link>
 			</div>

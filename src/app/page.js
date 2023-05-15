@@ -49,7 +49,7 @@ export default function Home() {
 								Invite Us
 							</Link>
 							<Link
-								href=''
+								href='https://docs.google.com/forms/d/1yIqavxRGwO2-281JZ1Y4k1iyjLHFtRpRBg4XXm2U96I'
 								className='btn btn-outline backdrop-blur-xl'>
 								Volunteer
 							</Link>
