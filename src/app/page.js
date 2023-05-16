@@ -13,19 +13,14 @@ import { useEffect } from 'react';
 
 const testimonials = [
 	{
-		text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores non esse sequi libero impedit',
-		name: 'Name 1',
-		city: 'City 1',
+		text: 'I am a superhero. I am not afraid. I will win in life with strength and confidence.',
+		name: 'Student',
+		city: 'Ramnad, India',
 	},
 	{
-		text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores non esse sequi libero impedit',
-		name: 'Name 2',
-		city: 'City 2',
-	},
-	{
-		text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores non esse sequi libero impedit',
-		name: 'Name 3',
-		city: 'City 3',
+		text: 'I sincerely appreciate the service and I pray that this will grow and reach many more students.',
+		name: 'Faculty',
+		city: 'Ramnad, India',
 	},
 ];
 
@@ -37,14 +32,14 @@ export default function Home() {
 				id='hero'>
 				<div className='hero-content text-center'>
 					<div className='max-w-md'>
-						<h1 className='text-4xl font-bold'>F5 MOMENTS</h1>
-						<p className='py-6'>
+						<h1 className='text-5xl font-bold'>F5 MOMENTS</h1>
+						<p className='py-6 text-xl'>
 							F5 is a non-profit organization that trains and equips the
 							churches to do School/Youth ministry in their locality
 						</p>
 						<div className='flex justify-evenly items-center px-10'>
 							<Link
-								href=''
+								href='https://docs.google.com/forms/d/e/1FAIpQLSelqQZVu2BybvBFAuQqh9hx9ksqNn-jCSbQKaQ-3JLSxlJGUQ/viewform'
 								className='btn btn-primary'>
 								Invite Us
 							</Link>
@@ -58,45 +53,58 @@ export default function Home() {
 				</div>
 			</section>
 
-			<section className='flex flex-col justify-center items-center min-h-screen'>
-				<div className='stats stats-horizontal shadow'>
-					<div className='stat'>
-						<div className='stat-figure text-primary'>
-							<UserGroupIcon
-								width={20}
-								height={20}
-							/>
-						</div>
-						<div className='stat-title'>Students Reached</div>
-						<div className='stat-value text-primary'>31000</div>
-						<div className='stat-desc'>2017 - now</div>
-					</div>
-					<div className='stat'>
-						<div className='stat-figure'>
-							<AcademicCapIcon
-								width={20}
-								height={20}
-							/>
-						</div>
-						<div className='stat-title'>Institutions</div>
-						<div className='stat-value'>39</div>
-						<div className='stat-desc'>2017 - now</div>
-					</div>
-					<div className='stat'>
-						<div className='stat-figure text-secondary'>
-							<BuildingOffice2Icon
-								width={20}
-								height={20}
-							/>
-						</div>
-						<div className='stat-title'>Cities</div>
-						<div className='stat-value text-secondary'>7</div>
-						<div className='stat-desc'>2017 - now</div>
-					</div>
+			<section className='flex flex-col justify-center items-center min-h-screen w-full'>
+				<div className='flex flex-col justify-center items-center backdrop-blur-xl rounded-xl bg-white/50 my-4 p-8 lg:border-[1px] w-[80%] lg:w-1/3'>
+					<h2 className='flex text-5xl items-center'>
+						31000
+						<UserGroupIcon
+							width={64}
+							height={64}
+							className='ml-4 text-primary'
+						/>
+					</h2>
+					<h4 className='text-2xl opacity-75'>Students</h4>
 				</div>
+				<div className='flex flex-col justify-center items-center backdrop-blur-xl rounded-xl bg-white/50 my-4 p-8 lg:border-[1px] w-[80%] lg:w-1/3'>
+					<h2 className='flex text-5xl items-center'>
+						39
+						<AcademicCapIcon
+							width={64}
+							height={64}
+							className='ml-4 text-success'
+						/>
+					</h2>
+					<h4 className='text-2xl opacity-75'>Institutions</h4>
+				</div>
+				<div className='flex flex-col justify-center items-center backdrop-blur-xl rounded-xl bg-white/50 my-4 p-8 lg:border-[1px] w-[80%] lg:w-1/3'>
+					<h2 className='flex text-5xl items-center'>
+						7{' '}
+						<BuildingOffice2Icon
+							width={64}
+							height={64}
+							className='ml-4 text-warning'
+						/>
+					</h2>
+					<h4 className='text-2xl opacity-75'>Cities</h4>
+				</div>
+				<p className='opacity-50 p-4'>2017 - now</p>
 			</section>
 
-			<section className='flex flex-col justify-center items-center min-h-screen'>
+			<section className='flex min-h-screen flex-col lg:flex-row w-full justify-evenly items-center'>
+				{testimonials.map((testimony) => (
+					<div
+						key={testimony.name}
+						className='flex flex-col justify-center items-center text-center my-8 lg:mx-8 w-[80%] lg:w-1/2 p-8 rounded-xl bg-white/50 lg:border-[1px]'>
+						<h3 className='text-2xl w-2/3 opacity-80'>
+							&ldquo; {testimony.text} &rdquo;
+						</h3>
+						<h4 className='text-xl opacity-60 mt-4'>{testimony.name}</h4>
+						<p className='opacity-30'>{testimony.city}</p>
+					</div>
+				))}
+			</section>
+
+			<section className='flex flex-col justify-center items-center min-h-screen pt-32'>
 				<div className='mockup-phone'>
 					<div className='camera'></div>
 					<div className='display'>
@@ -136,24 +144,10 @@ export default function Home() {
 				<h2 className='py-16 text-3xl'>See you there!</h2>
 			</section>
 
-			{/* <section className='flex min-h-screen flex-col lg:flex-row w-full justify-evenly items-center '>
-				{testimonials.map((testimony) => (
-					<div
-						key={testimony.name}
-						className='flex flex-col justify-center items-center text-center my-8 lg:w-1/3'>
-						<h3 className='text-2xl w-2/3 opacity-75'>
-							&ldquo; {testimony.text} &rdquo;
-						</h3>
-						<h4>{testimony.name}</h4>
-						<p className='opacity-50'>{testimony.city}</p>
-					</div>
-				))}
-			</section> */}
-
 			<section
 				id='contact'
 				className='footer footer-center p-4 border-t-[1px] backdrop-blur-xl bg-white/50'>
-				<div className='flex justify-evenly items-center w-full flex-wrap'>
+				<div className='flex flex-col lg:flex-row justify-evenly items-center w-full flex-wrap'>
 					{/* Instagram */}
 					<Link
 						href='https://www.instagram.com/'

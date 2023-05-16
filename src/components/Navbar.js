@@ -11,7 +11,7 @@ const Navbar = () => {
 					href='/#hero'
 					className='hover:opacity-75'>
 					<Image
-						className='rounded-full h-[10vh] w-[10vh]'
+						className='rounded-full h-[7vh] w-[7vh]'
 						src='/F5 Logo-color black.png'
 						alt=''
 						height={128}
@@ -28,11 +28,13 @@ const Navbar = () => {
 						</Link>
 					</li>
 					<li>
-						<Link href=''>Invite</Link>
+						<Link href='https://docs.google.com/forms/d/e/1FAIpQLSelqQZVu2BybvBFAuQqh9hx9ksqNn-jCSbQKaQ-3JLSxlJGUQ/viewform'>
+							Invite
+						</Link>
 					</li>
-					<li>
+					{/* <li>
 						<Link href=''>Support</Link>
-					</li>
+					</li> */}
 				</ul>
 			</div>
 
@@ -54,18 +56,20 @@ const Navbar = () => {
 					</label>
 					<ul
 						tabIndex={0}
-						className='menu menu-compact dropdown-content mt-3 p-2 shadow rounded-box w-52'>
+						className='menu menu-compact dropdown-content mt-6 p-2 shadow rounded-box w-52'>
 						<li>
 							<Link href='https://docs.google.com/forms/d/1yIqavxRGwO2-281JZ1Y4k1iyjLHFtRpRBg4XXm2U96I'>
 								Volunteer
 							</Link>
 						</li>
 						<li>
-							<Link href=''>Invite</Link>
+							<Link href='https://docs.google.com/forms/d/e/1FAIpQLSelqQZVu2BybvBFAuQqh9hx9ksqNn-jCSbQKaQ-3JLSxlJGUQ/viewform'>
+								Invite
+							</Link>
 						</li>
-						<li>
+						{/* <li>
 							<Link href=''>Support</Link>
-						</li>
+						</li> */}
 						{/* <li>
 							<Link href='/#contact'>Contact Us</Link>
 						</li> */}
@@ -86,7 +90,7 @@ const Navbar = () => {
 					href='/#hero'
 					className='hover:opacity-75'>
 					<Image
-						className='rounded-full h-[10vh] w-[10vh]'
+						className='rounded-full h-[7vh] w-[7vh]'
 						src='/F5 Logo-color black.png'
 						alt=''
 						height={128}
