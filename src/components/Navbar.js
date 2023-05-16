@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Bars3Icon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/solid';
+import { Bars3Icon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 
 const Navbar = () => {
@@ -35,12 +35,11 @@ const Navbar = () => {
 					{/* <li>
 						<Link href=''>Support</Link>
 					</li> */}
+					<li>
+						<Link href='/#contact'>Contact Us</Link>
+					</li>
 				</ul>
 			</div>
-
-			{/* <div className='navbar-end hidden lg:flex'>
-				<Link href='/#contact'>Contact Us</Link>
-			</div> */}
 
 			{/* Mobile Navbar */}
 			<div className='lg:hidden navbar-start'>
@@ -70,20 +69,12 @@ const Navbar = () => {
 						{/* <li>
 							<Link href=''>Support</Link>
 						</li> */}
-						{/* <li>
+						<li>
 							<Link href='/#contact'>Contact Us</Link>
-						</li> */}
+						</li>
 					</ul>
 				</div>
 			</div>
-
-			{/* <div className='lg:hidden navbar-center'>
-				<Link
-					href='/#hero'
-					className='hover:opacity-50 text-lg'>
-					F5 MOMENTS
-				</Link>
-			</div> */}
 
 			<div className='lg:hidden navbar-end'>
 				<Link
