@@ -7,6 +7,7 @@ import {
   PhoneIcon,
   UserGroupIcon,
 } from "@heroicons/react/24/solid";
+import Image from "next/image";
 import Link from "next/link";
 
 const testimonials = [
@@ -24,72 +25,68 @@ const testimonials = [
 
 export default function Home() {
   return (
-    <main className="flex flex-col h-full items-center justify-center text-center">
-      <section className="hero min-h-screen" id="hero">
-        <div className="hero-content text-center">
-          <div className="max-w-md">
-            <h1 className="text-5xl font-bold">F5 MOMENTS</h1>
-            <p className="py-6 text-xl">
-              F5 is a non-profit organization that trains and equips the youth
-              to face the challenges of life by reaching out to them through
-              their schools and colleges.
-            </p>
-            <div className="flex justify-evenly items-center px-10">
-              <Link
-                target="_blank"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSelqQZVu2BybvBFAuQqh9hx9ksqNn-jCSbQKaQ-3JLSxlJGUQ/viewform"
-                className="btn btn-primary"
-              >
-                Invite Us
-              </Link>
-              <Link
-                target="_blank"
-                href="https://docs.google.com/forms/d/1yIqavxRGwO2-281JZ1Y4k1iyjLHFtRpRBg4XXm2U96I"
-                className="btn btn-outline backdrop-blur-xl"
-              >
-                Volunteer
-              </Link>
-            </div>
+    <main className="bg-[#111] text-[#eee] flex flex-col h-full items-center justify-center text-center">
+      <section
+        className="h-screen flex flex-col justify-center items-center w-full"
+        id="hero"
+        style={{
+          backgroundImage: "url('/background-images/3.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundBlendMode: "overlay",
+          backgroundColor: "rgba(0,0,0,0.5)",
+        }}
+      >
+        <div className="max-w-lg z-50 backdrop-blur-xl p-8 rounded-xl">
+          <h1 className="text-5xl font-bold">F5 MOMENTS</h1>
+          <p className="py-6 text-xl">
+            F5 is a non-profit organization that trains and equips the youth to
+            face the challenges of life by reaching out to them through their
+            schools and colleges.
+          </p>
+          <div className="flex justify-evenly items-center px-10">
+            <Link
+              target="_blank"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSelqQZVu2BybvBFAuQqh9hx9ksqNn-jCSbQKaQ-3JLSxlJGUQ/viewform"
+              className="bg-[#eee] hover:bg-[#39a2f7] text-[#111] hover:text-[#eee] border-[1px] hover:border-[#39a2f7] rounded py-2 px-6"
+            >
+              Invite Us
+            </Link>
+            <Link
+              target="_blank"
+              href="https://docs.google.com/forms/d/1yIqavxRGwO2-281JZ1Y4k1iyjLHFtRpRBg4XXm2U96I"
+              className="border-[1px] rounded py-2 px-6 hover:bg-[#222] hover:text-[#eee] hover:border-[#222]"
+            >
+              Volunteer
+            </Link>
           </div>
         </div>
       </section>
 
-      <section className="flex flex-col justify-center items-center min-h-screen w-full">
+      <section className="bg-gradient flex flex-col justify-center items-center min-h-screen w-full">
         <h2 className="text-3xl opacity-75 my-8">Our Impact</h2>
-        <div className="flex flex-col lg:flex-row justify-center items-center w-[80%]">
-          <div className="flex flex-col justify-center items-center backdrop-blur-xl border-[1px] rounded-xl bg-white/50 p-8 lg:border-[1px] w-[80%] lg:w-1/3">
+        <div className="flex flex-col lg:flex-row justify-center items-center w-[80%] bg-[#111] rounded-xl">
+          <div className="card flex flex-col justify-center items-center p-8 w-[80%] lg:w-1/3">
             <h4 className="text-2xl opacity-75">Impacted</h4>
             <h2 className="flex text-5xl items-center">
               31000
-              <UserGroupIcon
-                width={64}
-                height={64}
-                className="ml-4 text-primary"
-              />
+              <UserGroupIcon width={64} height={64} className="ml-4" />
             </h2>
             <h4 className="text-2xl opacity-50">Students</h4>
           </div>
-          <div className="flex flex-col justify-center items-center backdrop-blur-xl border-[1px] rounded-xl bg-white/50 p-8 lg:border-[1px] w-[80%] lg:w-1/3">
+          <div className="card flex flex-col justify-center items-center p-8 w-[80%] lg:w-1/3">
             <h4 className="text-2xl opacity-75">Visited</h4>
             <h2 className="flex text-5xl items-center">
               39
-              <AcademicCapIcon
-                width={64}
-                height={64}
-                className="ml-4 text-success"
-              />
+              <AcademicCapIcon width={64} height={64} className="ml-4" />
             </h2>
             <h4 className="text-2xl opacity-50">Institutions</h4>
           </div>
-          <div className="flex flex-col justify-center items-center backdrop-blur-xl border-[1px] rounded-xl bg-white/50 p-8 lg:border-[1px] w-[80%] lg:w-1/3">
+          <div className="card flex flex-col justify-center items-center p-8 w-[80%] lg:w-1/3">
             <h4 className="text-2xl opacity-75">Reached</h4>
             <h2 className="flex text-5xl items-center">
               7
-              <BuildingOffice2Icon
-                width={64}
-                height={64}
-                className="ml-4 text-warning"
-              />
+              <BuildingOffice2Icon width={64} height={64} className="ml-4" />
             </h2>
             <h4 className="text-2xl opacity-75">Cities</h4>
           </div>
@@ -103,7 +100,7 @@ export default function Home() {
           {testimonials.map((testimony) => (
             <div
               key={testimony.name}
-              className="flex flex-col justify-center items-center text-center my-8 w-[80%] lg:w-1/2 lg:mx-4 p-8 rounded-xl backdrop-blur-xl border-[1px] bg-white/50 lg:border-[1px]"
+              className="flex flex-col justify-center items-center text-center my-8 w-[80%] lg:w-1/2 lg:mx-4 p-8 rounded-xl backdrop-blur-xl bg-[#222]"
             >
               <h3 className="text-2xl w-2/3 opacity-80">
                 &ldquo; {testimony.text} &rdquo;
@@ -115,7 +112,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col justify-center items-center min-h-screen pt-32">
+      <section className="bg-gradient flex flex-col justify-center items-center min-h-screen w-full pt-32">
         <h2 className="mb-16 text-3xl opacity-75">
           F5 team will be reaching these cities in 2023
         </h2>
@@ -136,7 +133,7 @@ export default function Home() {
 
       <section
         id="contact"
-        className="footer footer-center py-8 border-t-[1px] backdrop-blur-xl bg-white/50"
+        className="footer footer-center py-8 border-t-[1px] backdrop-blur-xl bg-[#111]"
       >
         <div className="flex flex-col lg:flex-row justify-evenly items-center w-full flex-wrap">
           {/* Instagram */}
