@@ -9,7 +9,7 @@ import {
 } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import Link from "next/link";
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const testimonials = [
   {
@@ -25,21 +25,12 @@ const testimonials = [
 ];
 
 export default function Home() {
-  const [width, setWidth] = useState(null);
-  const [height, setHeight] = useState(null);
+  const [width, setWidth] = useState(0);
+  const [height, setHeight] = useState(0);
 
-  useLayoutEffect(() => {
-    window.addEventListener("resize", () => {
-      setWidth(window.innerWidth);
-      setHeight(window.innerHeight);
-    });
-
-    return () => {
-      window.removeEventListener("resize", () => {
-        setWidth(window.innerWidth);
-        setHeight(window.innerHeight);
-      });
-    };
+  useEffect(() => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
   }, [height, width]);
 
   return (
@@ -67,7 +58,7 @@ export default function Home() {
               className="rounded-lg shadow-lg h-[80%] w-[80%] m-auto"
             />
             <button className="p-2 bg-white text-black mt-2 rounded-lg hover:bg-[#eee]">
-              CLICK HERE TO REGISTER FOR FREE
+              CLICK HERE TO REGISTER
             </button>
           </Link>
         )}
