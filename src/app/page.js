@@ -184,7 +184,11 @@ export default function Home() {
       <section id="contact" className="w-full py-8">
         <div className="flex flex-col md:flex-row md:justify-evenly text-left pl-8">
           {/* Instagram */}
-          <Link href="https://www.instagram.com/" className="flex my-2">
+          <Link
+            target="_blank"
+            href="https://www.instagram.com/"
+            className="flex my-2"
+          >
             <svg
               className="h-[3vh] w-[3vh] mr-2"
               xmlns="http://www.w3.org/2000/svg"
@@ -196,7 +200,11 @@ export default function Home() {
             @f5_moments
           </Link>
           {/* Whatsapp */}
-          <Link href="https://wa.me/919843209882" className="flex my-2">
+          <Link
+            target="_blank"
+            href="https://wa.me/919843209882"
+            className="flex my-2"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-[3vh] w-[3vh] mr-2"
@@ -208,12 +216,16 @@ export default function Home() {
             +91-9843209882
           </Link>
           {/* Mail */}
-          <Link href="mailto:jeremiahjerry93@gmail.com" className="flex my-2">
+          <Link
+            target="_blank"
+            href="mailto:jeremiahjerry93@gmail.com"
+            className="flex my-2"
+          >
             <EnvelopeIcon className="h-[3vh] w-[3vh] mr-2" />
             jeremiahjerry93@gmail.com
           </Link>
           {/* Mobile */}
-          <Link href="tel:+919843209882" className="flex my-2">
+          <Link target="_blank" href="tel:+919843209882" className="flex my-2">
             <PhoneIcon className="h-[3vh] w-[3vh] mr-2" />
             +91-9843209882
           </Link>
