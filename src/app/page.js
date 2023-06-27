@@ -9,7 +9,7 @@ import {
 } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 
 const testimonials = [
   {
@@ -25,16 +25,14 @@ const testimonials = [
 ];
 
 export default function Home() {
-  const [width, setWidth] = useState(window.innerWidth || null);
-  const [height, setHeight] = useState(window.innerHeight || null);
+  const [width, setWidth] = useState(null);
+  const [height, setHeight] = useState(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     window.addEventListener("resize", () => {
       setWidth(window.innerWidth);
       setHeight(window.innerHeight);
     });
-
-    console.log(width, height);
 
     return () => {
       window.removeEventListener("resize", () => {
@@ -52,10 +50,10 @@ export default function Home() {
             <Image
               src="/images/Desktop banner.jpg"
               alt="Workshop banner"
-              width={width * 0.75}
-              height={height * 0.75}
+              width={1920}
+              height={1080}
               quality={100}
-              className="rounded-lg shadow-lg"
+              className="rounded-lg shadow-lg h-[80%] w-[80%] m-auto"
             />
           </Link>
         ) : (
@@ -63,10 +61,10 @@ export default function Home() {
             <Image
               src="/images/Mobile banner.jpg"
               alt="Workshop banner"
-              width={width * 0.8}
-              height={height * 0.8}
+              width={1080}
+              height={1350}
               quality={100}
-              className="rounded-lg shadow-lg"
+              className="rounded-lg shadow-lg h-[80%] w-[80%] m-auto"
             />
             <button className="p-2 bg-white text-black mt-2 rounded-lg hover:bg-[#eee]">
               CLICK HERE TO REGISTER FOR FREE
