@@ -9,6 +9,7 @@ import {
 } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const testimonials = [
   {
@@ -24,8 +25,56 @@ const testimonials = [
 ];
 
 export default function Home() {
+  const [width, setWidth] = useState(window.innerWidth || null);
+  const [height, setHeight] = useState(window.innerHeight || null);
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setWidth(window.innerWidth);
+      setHeight(window.innerHeight);
+    });
+
+    console.log(width, height);
+
+    return () => {
+      window.removeEventListener("resize", () => {
+        setWidth(window.innerWidth);
+        setHeight(window.innerHeight);
+      });
+    };
+  }, [height, width]);
+
   return (
     <main className="bg-[#111] text-[#eee] flex flex-col h-full items-center justify-center text-center">
+      <section className="h-screen flex flex-col justify-center items-center w-full m-auto bg-gradient">
+        {width > height ? (
+          <Link target="_blank" href="https://forms.gle/cPF9SSsrsY9mrVEt6">
+            <Image
+              src="/images/Desktop banner.jpg"
+              alt="Workshop banner"
+              width={width * 0.75}
+              height={height * 0.75}
+              quality={100}
+              className="rounded-lg shadow-lg"
+            />
+          </Link>
+        ) : (
+          <Link target="_blank" href="https://forms.gle/cPF9SSsrsY9mrVEt6">
+            <Image
+              src="/images/Mobile banner.jpg"
+              alt="Workshop banner"
+              width={width * 0.8}
+              height={height * 0.8}
+              quality={100}
+              className="rounded-lg shadow-lg"
+            />
+            <button className="p-2 bg-white text-black mt-2 rounded-lg hover:bg-[#eee]">
+              CLICK HERE TO REGISTER FOR FREE
+            </button>
+          </Link>
+        )}
+      </section>
+
       <section
         className="h-screen flex flex-col justify-center items-center w-full"
         id="hero"
@@ -37,7 +86,7 @@ export default function Home() {
           backgroundColor: "rgba(0,0,0,0.5)",
         }}
       >
-        <div className="max-w-lg z-50 backdrop-blur-xl p-8 rounded-xl">
+        <div className="max-w-lg z-10 backdrop-blur-xl p-8 rounded-xl">
           <h1 className="text-5xl font-bold">F5 MOMENTS</h1>
           <p className="py-6 text-xl">
             F5 is a non-profit organization that trains and equips the youth to
