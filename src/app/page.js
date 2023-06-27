@@ -182,7 +182,7 @@ export default function Home() {
       </section>
 
       <section id="contact" className="w-full py-8">
-        <div className="flex flex-col text-left pl-8">
+        <div className="flex flex-col md:flex-row md:justify-evenly text-left pl-8">
           {/* Instagram */}
           <Link href="https://www.instagram.com/" className="flex my-2">
             <svg
@@ -218,7 +218,7 @@ export default function Home() {
             +91-9843209882
           </Link>
         </div>
-        <p className="mt-4 pl-8 text-left">
+        <p className="mt-4 pl-8 text-left md:text-center">
           Copyright &copy; 2023 - All rights reserved
         </p>
       </section>
