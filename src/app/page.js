@@ -35,7 +35,7 @@ export default function Home() {
 
   return (
     <main className="bg-[#111] text-[#eee] flex flex-col h-full items-center justify-center text-center">
-      <section className="h-screen flex flex-col justify-center items-center w-full m-auto bg-gradient">
+      {/* <section className="h-screen flex flex-col justify-center items-center w-full m-auto bg-gradient">
         {width > height ? (
           <Link target="_blank" href="https://forms.gle/cPF9SSsrsY9mrVEt6">
             <Image
@@ -62,7 +62,7 @@ export default function Home() {
             </button>
           </Link>
         )}
-      </section>
+      </section> */}
 
       <section
         className="h-screen flex flex-col justify-center items-center w-full"
@@ -75,7 +75,7 @@ export default function Home() {
           backgroundColor: "rgba(0,0,0,0.5)",
         }}
       >
-        <div className="max-w-lg z-10 backdrop-blur-xl p-8 rounded-xl">
+        <div className="max-w-lg z-10 backdrop-blur-xl p-8 rounded-xl w-[80%]">
           <h1 className="text-5xl font-bold">F5 MOMENTS</h1>
           <p className="py-6 text-xl">
             F5 is a non-profit organization that trains and equips the youth to
@@ -102,8 +102,8 @@ export default function Home() {
       </section>
 
       <section className="bg-gradient flex flex-col justify-center items-center min-h-screen w-full">
-        <h2 className="text-3xl opacity-75 my-8">Our Impact</h2>
-        <div className="flex flex-col lg:flex-row justify-center items-center w-[80%] bg-[#111] rounded-xl">
+        <h2 className="text-3xl opacity-90 my-8">Our Impact</h2>
+        <div className="flex flex-col lg:flex-row justify-center items-center w-[60%] bg-[#111] rounded-xl">
           <div className="card flex flex-col justify-center items-center p-8 w-[80%] lg:w-1/3">
             <h4 className="text-2xl opacity-75">Impacted</h4>
             <h2 className="flex text-5xl items-center">
@@ -129,7 +129,7 @@ export default function Home() {
             <h4 className="text-2xl opacity-75">Cities</h4>
           </div>
         </div>
-        <p className="opacity-50 p-4">2017 - now</p>
+        <p className="opacity-90 p-4">2017 - now</p>
       </section>
 
       <section className="flex min-h-screen flex-col w-full justify-center items-center">
@@ -138,10 +138,10 @@ export default function Home() {
           {testimonials.map((testimony) => (
             <div
               key={testimony.name}
-              className="flex flex-col justify-center items-center text-center my-8 w-[80%] lg:w-1/2 lg:mx-4 rounded-xl backdrop-blur-xl bg-[#222]"
+              className="flex flex-col justify-center items-center text-center my-8 w-[80%] lg:w-[40%] lg:mx-4 rounded-xl backdrop-blur-xl bg-[#222]"
             >
               <span className="bg-gradient h-8 w-full" />
-              <h3 className="text-2xl w-2/3 pt-4">
+              <h3 className="text-2xl w-[80%] pt-4">
                 &ldquo; {testimony.text} &rdquo;
               </h3>
               <h4 className="text-xl opacity-80 mt-4">{testimony.name}</h4>
@@ -155,17 +155,49 @@ export default function Home() {
         <h2 className="mb-16 text-3xl">
           F5 team will be reaching these cities in 2023
         </h2>
-        <div className="grid grid-cols-2 grid-rows-4 gap-4 w-[80%] max-w-xl">
-          <div className="grid-item bg-[#111] py-2">Bangalore</div>
-          <div className="grid-item bg-[#111] py-2">Chennai</div>
-          <div className="grid-item bg-[#111] py-2">Trichy</div>
-          <div className="grid-item bg-[#111] py-2">Hyderabad</div>
-          <div className="grid-item bg-[#111] py-2">Vizag</div>
-          <div className="grid-item bg-[#111] py-2">Madurai</div>
-          <div className="grid-item bg-[#111] py-2">Tirunelveli</div>
-          <div className="grid-item bg-[#111] py-2">Hosur</div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-[60%] max-w-2xl">
+          <div className="grid-item bg-[#333] py-2 rounded-md flex flex-col justify-center items-center">
+            <h3 className="text-xl uppercase font-bold my-2">Tirunelveli</h3>
+            <p className="pb-2">June 26-30</p>
+          </div>
+          <div className="grid-item bg-[#111] py-2 rounded-md flex flex-col justify-center items-center">
+            <h3 className="text-xl uppercase font-bold my-2">Trichy</h3>
+            <p className="pb-2">July 3-7</p>
+          </div>
+          <div className="grid-item bg-[#111] py-2 rounded-md flex flex-col justify-center items-center">
+            <h3 className="text-xl uppercase font-bold my-2">Chennai</h3>
+            <p className="pb-2">July 10-14</p>
+          </div>
+          <div className="grid-item bg-[#111] py-2 rounded-md flex flex-col justify-center items-center">
+            <h3 className="text-xl uppercase font-bold my-2">Madurai</h3>
+            <p className="pb-2">July 10-14</p>
+          </div>
+          <div className="grid-item bg-[#111] py-2 rounded-md flex flex-col justify-center items-center">
+            <h3 className="text-xl uppercase font-bold my-2">Hyderabad</h3>
+            <p className="pb-2">August 9-11</p>
+          </div>
+          <div className="grid-item bg-[#111] py-2 rounded-md flex flex-col justify-center items-center">
+            <h3 className="text-xl uppercase font-bold my-2">Hosur</h3>
+            <p className="pb-2">August 21-25</p>
+          </div>
+          <div className="grid-item bg-[#111] py-2 rounded-md flex flex-col justify-center items-center">
+            <h3 className="text-xl uppercase font-bold my-2">KGF</h3>
+            <p className="pb-2">September 4-8</p>
+          </div>
+          <div className="grid-item bg-[#111] py-2 rounded-md flex flex-col justify-center items-center">
+            <h3 className="text-xl uppercase font-bold my-2">Vizag</h3>
+            <p className="pb-2">September 25-29</p>
+          </div>
+          <div className="grid-item bg-[#111] py-2 rounded-md flex flex-col justify-center items-center">
+            <h3 className="text-xl uppercase font-bold my-2">Bangalore</h3>
+            <p className="pb-2">TBD</p>
+          </div>
+          <div className="grid-item bg-[#111] py-2 rounded-md flex flex-col justify-center items-center">
+            <h3 className="text-xl uppercase font-bold my-2">And more</h3>
+            <p className="pb-2"></p>
+          </div>
         </div>
-        <h3 className="py-16 text-xl opacity-80">
+        <h3 className="py-16 text-xl">
           We are coming soon to a city near you!
         </h3>
       </section>
