@@ -27,11 +27,15 @@ const testimonials = [
 export default function Home() {
   const [width, setWidth] = useState(0);
   const [height, setHeight] = useState(0);
+  const [currentDate, setCurrentDate] = useState(null);
 
   useEffect(() => {
     setWidth(window.innerWidth);
     setHeight(window.innerHeight);
-  }, [height, width]);
+    setCurrentDate(new Date().toLocaleString());
+
+    console.log(currentDate);
+  }, [height, width, currentDate]);
 
   return (
     <main className="bg-[#111] text-[#eee] flex flex-col h-full items-center justify-center text-center">
@@ -75,7 +79,7 @@ export default function Home() {
           backgroundColor: "rgba(0,0,0,0.5)",
         }}
       >
-        <div className="max-w-lg z-10 backdrop-blur-xl p-8 rounded-xl w-[80%]">
+        <div className="max-w-lg z-10 backdrop-blur-xl p-8 rounded-xl w-[90%]">
           <h1 className="text-5xl font-bold">F5 MOMENTS</h1>
           <p className="py-6 text-xl">
             F5 is a non-profit organization that trains and equips the youth to
@@ -86,14 +90,14 @@ export default function Home() {
             <Link
               target="_blank"
               href="https://docs.google.com/forms/d/e/1FAIpQLSelqQZVu2BybvBFAuQqh9hx9ksqNn-jCSbQKaQ-3JLSxlJGUQ/viewform"
-              className="bg-[#eee] hover:bg-[#39a2f7] text-[#111] hover:text-[#eee] border-[1px] hover:border-[#39a2f7] rounded py-2 px-6"
+              className="bg-[#eee] hover:bg-[#111] text-[#111] hover:text-[#eee] border-[1px] hover:border-[#111] rounded py-2 px-6"
             >
               Invite Us
             </Link>
             <Link
               target="_blank"
               href="https://docs.google.com/forms/d/1yIqavxRGwO2-281JZ1Y4k1iyjLHFtRpRBg4XXm2U96I"
-              className="border-[1px] rounded py-2 px-6 hover:bg-[#222] hover:text-[#eee] hover:border-[#222]"
+              className="border-[1px] rounded py-2 px-6 hover:bg-[#eee] hover:text-[#111] hover:border-[#eee]"
             >
               Volunteer
             </Link>
@@ -160,7 +164,7 @@ export default function Home() {
             <h3 className="text-xl uppercase font-bold my-2">Tirunelveli</h3>
             <p className="pb-2">June 26-30</p>
           </div>
-          <div className="grid-item bg-[#111] py-2 rounded-md flex flex-col justify-center items-center">
+          <div className="grid-item bg-[#eee] text-[#111] py-2 rounded-md flex flex-col justify-center items-center">
             <h3 className="text-xl uppercase font-bold my-2">Trichy</h3>
             <p className="pb-2">July 3-7</p>
           </div>
@@ -170,7 +174,7 @@ export default function Home() {
           </div>
           <div className="grid-item bg-[#111] py-2 rounded-md flex flex-col justify-center items-center">
             <h3 className="text-xl uppercase font-bold my-2">Madurai</h3>
-            <p className="pb-2">July 10-14</p>
+            <p className="pb-2">July 17-21</p>
           </div>
           <div className="grid-item bg-[#111] py-2 rounded-md flex flex-col justify-center items-center">
             <h3 className="text-xl uppercase font-bold my-2">Hyderabad</h3>
