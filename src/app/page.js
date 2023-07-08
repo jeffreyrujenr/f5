@@ -39,34 +39,20 @@ export default function Home() {
 
   return (
     <main className="bg-[#111] text-[#eee] flex flex-col h-full items-center justify-center text-center">
-      {/* <section className="h-screen flex flex-col justify-center items-center w-full m-auto bg-gradient">
-        {width > height ? (
-          <Link target="_blank" href="https://forms.gle/cPF9SSsrsY9mrVEt6">
-            <Image
-              src="/images/Desktop banner.jpg"
-              alt="Workshop banner"
-              width={1920}
-              height={1080}
-              quality={100}
-              className="rounded-lg shadow-lg h-[80%] w-[80%] m-auto"
-            />
+      <section className="h-screen items-center justify-center">
+        <Image
+          src="/images/workshop.jpg"
+          height={1350}
+          width={1080}
+          alt="Upskill Workshop Trichy"
+          className="mt-[10vh] h-[80%] w-[90%] m-auto rounded-md"
+        />
+        <button className="bg-orange-500 hover:bg-white hover:text-orange-500  px-6 py-2 font-bold text-xl rounded-md my-4 w-[90%]">
+          <Link href="https://forms.gle/UmNAdLFQFGagFG717" target="_blank">
+            REGISTER NOW
           </Link>
-        ) : (
-          <Link target="_blank" href="https://forms.gle/cPF9SSsrsY9mrVEt6">
-            <Image
-              src="/images/Mobile banner.jpg"
-              alt="Workshop banner"
-              width={1080}
-              height={1350}
-              quality={100}
-              className="rounded-lg shadow-lg h-[80%] w-[80%] m-auto"
-            />
-            <button className="p-2 bg-white text-black mt-2 rounded-lg hover:bg-[#eee]">
-              CLICK HERE TO REGISTER
-            </button>
-          </Link>
-        )}
-      </section> */}
+        </button>
+      </section>
 
       <section
         className="h-screen flex flex-col justify-center items-center w-full"
@@ -164,11 +150,11 @@ export default function Home() {
             <h3 className="text-xl uppercase font-bold my-2">Tirunelveli</h3>
             <p className="pb-2">June 26-30</p>
           </div>
-          <div className="grid-item bg-[#eee] text-[#111] py-2 rounded-md flex flex-col justify-center items-center">
+          <div className="grid-item bg-[#333] py-2 rounded-md flex flex-col justify-center items-center">
             <h3 className="text-xl uppercase font-bold my-2">Trichy</h3>
             <p className="pb-2">July 3-7</p>
           </div>
-          <div className="grid-item bg-[#111] py-2 rounded-md flex flex-col justify-center items-center">
+          <div className="grid-item bg-orange-500 text-[#eee] py-2 rounded-md flex flex-col justify-center items-center">
             <h3 className="text-xl uppercase font-bold my-2">Chennai</h3>
             <p className="pb-2">July 10-14</p>
           </div>
