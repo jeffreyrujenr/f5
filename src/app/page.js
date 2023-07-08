@@ -40,13 +40,15 @@ export default function Home() {
   return (
     <main className="bg-[#111] text-[#eee] flex flex-col h-full items-center justify-center text-center">
       <section className="h-screen items-center justify-center">
-        <Image
-          src="/images/workshop.jpg"
-          height={1350}
-          width={1080}
-          alt="Upskill Workshop Trichy"
-          className="mt-[10vh] h-[80%] w-[90%] m-auto rounded-md"
-        />
+        <Link href="https://forms.gle/UmNAdLFQFGagFG717" target="_blank">
+          <Image
+            src="/images/workshop.jpg"
+            height={1350}
+            width={1080}
+            alt="Upskill Workshop Trichy"
+            className="mt-[10vh] h-[75%] w-[90%] m-auto rounded-md"
+          />
+        </Link>
         <button className="bg-orange-500 hover:bg-white hover:text-orange-500  px-6 py-2 font-bold text-xl rounded-md my-4 w-[90%]">
           <Link href="https://forms.gle/UmNAdLFQFGagFG717" target="_blank">
             REGISTER NOW

@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import Head from "next/head";
+// import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="overflow-x-hidden">
-      <Head>
+      <head>
         <title>F5 Moments</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta property="og:title" content="F5 Moments" key="title" />
@@ -29,10 +29,11 @@ export default function RootLayout({ children }) {
         />
         <meta name="author" content="Jeremiah Jerry" />
         <meta />
-      </Head>
+      </head>
       <body className={inter.className}>
         <Navbar />
         {children}
+        {/* <Analytics /> */}
       </body>
     </html>
   );
