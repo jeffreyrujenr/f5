@@ -24,22 +24,104 @@ const testimonials = [
   },
 ];
 
+const months = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "June",
+  "July",
+  "Aug",
+  "Sept",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+
+const schedule = [
+  {
+    city: "Tirunelveli",
+    startDate: 26,
+    endDate: 30,
+    month: 6,
+  },
+  {
+    city: "Trichy",
+    startDate: 3,
+    endDate: 7,
+    month: 7,
+  },
+  {
+    city: "Chennai",
+    startDate: 10,
+    endDate: 14,
+    month: 7,
+  },
+  {
+    city: "Madurai",
+    startDate: 17,
+    endDate: 21,
+    month: 7,
+  },
+  {
+    city: "Hyderabad",
+    startDate: 9,
+    endDate: 11,
+    month: 8,
+  },
+  {
+    city: "Hosur",
+    startDate: 21,
+    endDate: 25,
+    month: 8,
+  },
+  {
+    city: "KGF",
+    startDate: 4,
+    endDate: 8,
+    month: 9,
+  },
+  {
+    city: "Vizag",
+    startDate: 25,
+    endDate: 29,
+    month: 9,
+  },
+  {
+    city: "Bangalore",
+    startDate: "TBD",
+    endDate: "TBD",
+    month: "TBD",
+  },
+  {
+    city: "And more",
+    startDate: "",
+    endDate: "",
+    month: "",
+  },
+];
+
 export default function Home() {
   const [width, setWidth] = useState(0);
   const [height, setHeight] = useState(0);
   const [currentDate, setCurrentDate] = useState(null);
+  const [currentMonth, setCurrentMonth] = useState(null);
+  const [currentYear, setCurrentYear] = useState(null);
 
   useEffect(() => {
     setWidth(window.innerWidth);
     setHeight(window.innerHeight);
-    setCurrentDate(new Date().toLocaleString());
+    setCurrentDate(new Date().getDate());
+    setCurrentMonth(new Date().getMonth());
+    setCurrentYear(new Date().getFullYear());
 
-    console.log(currentDate);
-  }, [height, width, currentDate]);
+    console.log(currentDate, currentMonth, currentYear);
+  }, [height, width, currentDate, currentMonth, currentYear]);
 
   return (
     <main className="bg-[#111] text-[#eee] flex flex-col h-full items-center justify-center text-center">
-      <section className="h-screen items-center justify-center">
+      {/* <section className="h-screen items-center justify-center">
         <Link href="https://forms.gle/UmNAdLFQFGagFG717" target="_blank">
           <Image
             src="/images/workshop.jpg"
@@ -54,7 +136,7 @@ export default function Home() {
             REGISTER NOW
           </Link>
         </button>
-      </section>
+      </section> */}
 
       <section
         className="h-screen flex flex-col justify-center items-center w-full"
@@ -127,7 +209,7 @@ export default function Home() {
       <section className="flex min-h-screen flex-col w-full justify-center items-center">
         <h2 className="text-3xl opacity-75 my-8">Testimonials</h2>
         <div className="flex flex-col lg:flex-row justify-center lg:justify-evenly items-center w-[80%]">
-          {testimonials.map((testimony) => (
+          {testimonials?.map((testimony) => (
             <div
               key={testimony.name}
               className="flex flex-col justify-center items-center text-center my-8 w-[80%] lg:w-[40%] lg:mx-4 rounded-xl backdrop-blur-xl bg-[#222]"
@@ -148,46 +230,22 @@ export default function Home() {
           F5 team will be reaching these cities in 2023
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-[60%] max-w-2xl">
-          <div className="grid-item bg-[#333] py-2 rounded-md flex flex-col justify-center items-center">
-            <h3 className="text-xl uppercase font-bold my-2">Tirunelveli</h3>
-            <p className="pb-2">June 26-30</p>
-          </div>
-          <div className="grid-item bg-[#333] py-2 rounded-md flex flex-col justify-center items-center">
-            <h3 className="text-xl uppercase font-bold my-2">Trichy</h3>
-            <p className="pb-2">July 3-7</p>
-          </div>
-          <div className="grid-item bg-orange-500 text-[#eee] py-2 rounded-md flex flex-col justify-center items-center">
-            <h3 className="text-xl uppercase font-bold my-2">Chennai</h3>
-            <p className="pb-2">July 10-14</p>
-          </div>
-          <div className="grid-item bg-[#111] py-2 rounded-md flex flex-col justify-center items-center">
-            <h3 className="text-xl uppercase font-bold my-2">Madurai</h3>
-            <p className="pb-2">July 17-21</p>
-          </div>
-          <div className="grid-item bg-[#111] py-2 rounded-md flex flex-col justify-center items-center">
-            <h3 className="text-xl uppercase font-bold my-2">Hyderabad</h3>
-            <p className="pb-2">August 9-11</p>
-          </div>
-          <div className="grid-item bg-[#111] py-2 rounded-md flex flex-col justify-center items-center">
-            <h3 className="text-xl uppercase font-bold my-2">Hosur</h3>
-            <p className="pb-2">August 21-25</p>
-          </div>
-          <div className="grid-item bg-[#111] py-2 rounded-md flex flex-col justify-center items-center">
-            <h3 className="text-xl uppercase font-bold my-2">KGF</h3>
-            <p className="pb-2">September 4-8</p>
-          </div>
-          <div className="grid-item bg-[#111] py-2 rounded-md flex flex-col justify-center items-center">
-            <h3 className="text-xl uppercase font-bold my-2">Vizag</h3>
-            <p className="pb-2">September 25-29</p>
-          </div>
-          <div className="grid-item bg-[#111] py-2 rounded-md flex flex-col justify-center items-center">
-            <h3 className="text-xl uppercase font-bold my-2">Bangalore</h3>
-            <p className="pb-2">TBD</p>
-          </div>
-          <div className="grid-item bg-[#111] py-2 rounded-md flex flex-col justify-center items-center">
-            <h3 className="text-xl uppercase font-bold my-2">And more</h3>
-            <p className="pb-2"></p>
-          </div>
+          {schedule?.map((item) => (
+            <div
+              className={`${
+                currentDate > item.endDate &&
+                (currentMonth === item.month || currentMonth > item.month)
+                  ? "bg-[#555]"
+                  : "bg-[#111]"
+              } grid-item py-2 rounded-md flex flex-col justify-center items-center`}
+              key={item.city}
+            >
+              <h3 className="text-xl uppercase font-bold my-2">{item.city}</h3>
+              <p className="pb-2">
+                {months[item.month - 1]} {item.startDate} - {item.endDate}
+              </p>
+            </div>
+          ))}
         </div>
         <h3 className="py-16 text-xl">
           We are coming soon to a city near you!
