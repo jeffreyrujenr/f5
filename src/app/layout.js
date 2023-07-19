@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import { Inter } from "next/font/google";
-// import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,13 +26,11 @@ export default function RootLayout({ children }) {
           name="keywords"
           content="F5 Moments, F5Moments, F5moments, f5 moments, f5moments, f5Moments"
         />
-        <meta name="author" content="Jeremiah Jerry" />
-        <meta />
+        <meta name="author" content="F5 Moments" />
       </head>
       <body className={inter.className}>
         <Navbar />
         {children}
-        {/* <Analytics /> */}
       </body>
     </html>
   );
