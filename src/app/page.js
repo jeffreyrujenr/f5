@@ -60,9 +60,9 @@ const schedule = [
   },
   {
     city: "Madurai",
-    startDate: 17,
-    endDate: 21,
-    month: 7,
+    startDate: "TBD",
+    endDate: "TBD",
+    month: "TBD",
   },
   {
     city: "Hyderabad",
@@ -232,12 +232,7 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-[60%] max-w-2xl">
           {schedule?.map((item) => (
             <div
-              className={`${
-                currentDate > item.endDate &&
-                (currentMonth === item.month || currentMonth > item.month)
-                  ? "bg-[#555]"
-                  : "bg-[#111]"
-              } grid-item py-2 rounded-md flex flex-col justify-center items-center`}
+              className='bg-[#111] grid-item py-2 rounded-md flex flex-col justify-center items-center'
               key={item.city}
             >
               <h3 className="text-xl uppercase font-bold my-2">{item.city}</h3>
