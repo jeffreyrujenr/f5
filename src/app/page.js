@@ -121,22 +121,17 @@ export default function Home() {
 
   return (
     <main className="bg-[#111] text-[#eee] flex flex-col h-full items-center justify-center text-center">
-      {/* <section className="h-screen items-center justify-center">
-        <Link href="https://forms.gle/UmNAdLFQFGagFG717" target="_blank">
-          <Image
-            src="/images/workshop.jpg"
-            height={1350}
-            width={1080}
-            alt="Upskill Workshop Trichy"
-            className="mt-[10vh] h-[75%] w-[90%] m-auto rounded-md"
-          />
-        </Link>
-        <button className="bg-orange-500 hover:bg-white hover:text-orange-500  px-6 py-2 font-bold text-xl rounded-md my-4 w-[90%]">
-          <Link href="https://forms.gle/UmNAdLFQFGagFG717" target="_blank">
-            REGISTER NOW
-          </Link>
-        </button>
-      </section> */}
+      <section className="h-screen flex flex-col justify-center items-center w-full bg-gradient mt-[10vh]">
+          <h1 className="text-3xl md:text-5xl font-bold m-2 bg-[#111] p-4 rounded-md">Upskill Workshop</h1>
+          <h2 className="text-2xl md:text-3xl font-bold m-2 bg-[#111] p-4 rounded-md">Music, Photography, Videography</h2>
+          <div className="bg-[#111] p-4 rounded-md m-2">
+          <h3 className="text-lg md:text-xl font-bold m-2">Date - 2 September 2023 (Saturday)</h3>
+          <h3 className="text-lg md:text-xl font-bold m-2">Time - 2:00 PM - 3:00 PM</h3>
+          <h3 className="text-lg md:text-xl font-bold m-2">Location - 303, 3rd Floor, Krishna Summit, Marathahalli, Bangalore - 560037</h3>
+          </div>
+          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeQDvSPaQ23d9h3sBL82EcBMPmu_jPT5tTo8tZSbu-zP2HhKQ/viewform" target="_blank" className="rounded-md bg-white px-6 py-2 text-black uppercase font-bold text-2xl m-4 w-[90%]">Register Now</Link>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.220128601969!2d77.69839047557359!3d12.957761387356305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1233227a9d87%3A0xfba20d7bb506b9ae!2sKrishna%20Summit!5e0!3m2!1sen!2sin!4v1693382929328!5m2!1sen!2sin" width="300" height="200" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" className="mx-auto rounded-md m-4"></iframe>
+      </section>
 
       <section
         className="h-screen flex flex-col justify-center items-center w-full"
